@@ -8,7 +8,8 @@
     "check-format": "prettier --check .",
     "prepare": "husky install",
     "build": "concurrently npm:build:*",
-    "build:webpack": "webpack --mode=production"
+    "build:webpack": "webpack --mode=production",
+    "deploy": "aws s3 sync ./dist s3://alexserverlesssystem-codedeployment-main-dev/main --delete"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
